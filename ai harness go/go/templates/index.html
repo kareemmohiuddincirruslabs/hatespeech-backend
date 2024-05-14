@@ -1,0 +1,133 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload File</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h2 {
+            color: #444;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        label, input[type="submit"] {
+            display: block;
+            margin: 10px 0;
+        }
+        input[type="text"], input[type="file"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #004494;
+        }
+    </style>
+</head>
+<body>
+    <h2>Upload AI Model Name and JSON File for Analysis</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="modelname">Model Name:</label>
+        <input type="text" id="modelname" name="modelname" required>
+        <label for="datafile">JSON File:</label>
+        <input type="file" id="datafile" name="datafile" accept=".json" required>
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload File</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+        form {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 400px;
+        }
+        h2 {
+            font-size: 24px;
+            color: #444;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        label {
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="file"], input[type="submit"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            width: calc(100% - 22px);
+            transition: border-color 0.3s;
+        }
+        input[type="submit"] {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #004494;
+        }
+        input[type="text"]:focus, input[type="file"]:focus, input[type="submit"]:focus {
+            border-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <h2>Upload AI Model and Data</h2>
+        <label for="modelname">Model Name:</label>
+        <input type="text" id="modelname" name="modelname" required>
+        <label for="datafile">JSON File:</label>
+        <input type="file" id="datafile" name="datafile" accept=".json" required>
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>
+
+
